@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: aliceblue;
+            padding: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: cadetblue;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+            flex: 50%;
+        }
+        #avatar-img {
+            margin: 0.3em;
+            border-radius: 5em;
+        }
+        .userProfile {
+            margin: auto;
+            padding: 0.5em;
+            width: 20em;
+            background-color: white;
+            border-radius: 0.4em;
+            color: cadetblue;
+        }
+        #fullname{
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+        #username{
+            font-size: 0.8em;
+        }
+        #userdetails{
+            margin-top: 1em;
+            font-size: 0.8em;
+            color: teal;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Random user</h1>
+    <div class="userProfile">
+        <div class="row">
+            <div class="column">
+                <img id = "avatar-img" src="" alt="">
+            </div>
+            <div class="column">
+                <div id="fullname">full name</div>
+                <div id="username">username</div>
+                <div id="userdetails">
+                    <div id="email">email</div>
+                    <div id="country">country</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        window.onload = function() {
+            fetch("https://randomuser.me/api")
+            .then(response => response.json())
+            .then(data => dataReady(data))
+        }
+
+        function dataReady(data) {
+            console.log(data);
+            var result = data.results[0];
+            var fullname = result.name.title + " "
+                        + result.name.title + " "
+                        + result.name.last;
+
+            document.getElementById("fullname").innerHTML = fullname;
+
+            var img = result.picture.large;
+            document.getElementById("avatar-img").src = img;
+
+            var username = result.login.username;
+            document.getElementById("username").innerHTML = "@" + username;
+
+            var email = result.email;
+            document.getElementById("email").innerHTML = email;
+
+            var country = result.location.timezone.description;
+            document.getElementById("country").innerHTML = country;
+        }
+
+    </script>
+</body>
+</html>

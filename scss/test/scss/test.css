@@ -1,0 +1,27 @@
+.greyscale {
+  background-color: greyscale(rgb(255, 0, 157));
+}
+
+.desaturate {
+  background-color: #cc3391;
+}
+
+.saturate {
+  background-color: #ff009d;
+}
+
+.saturate {
+  background-color: #ff009d;
+}
+
+.lighten {
+  background-color: #ffcceb;
+}
+
+.darken {
+  background-color: #33001f;
+}
+
+.mix {
+  background-color: #8000ce;
+}/*# sourceMappingURL=test.css.map */

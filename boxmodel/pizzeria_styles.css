@@ -1,0 +1,162 @@
+:root {
+    box-sizing: border-box;
+    color: #8d9b6a;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+body {
+    background-image: url("https://images.unsplash.com/photo-1601379329542-31c59347e2b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#header {
+    background-color: #fff; 
+    padding: 5px;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+}
+#logo{
+    float: left;
+    width: 20%;
+}
+#logo img {
+    width: 70px;
+    margin-left: 10px;
+}
+.menu {
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+.menu ul li {
+    display: inline-block;
+    padding-right: 20px;
+
+}
+.menu ul li a {
+    color: #8d9b6a;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu ul li a:hover {
+    color: #ffc107;
+    transition: 0.6s;
+    text-decoration: underline;
+}
+.contact-info {
+    float: left;
+    width: 20%;
+}
+.contact-info .tel {
+    font-size: 1.2rem;
+    margin: 25px auto 0px;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.slider-box {
+    height: 200px;
+    background-color: white;
+}
+.slider-half-item {
+    width: 50%;
+    float: left;
+    height: 100%;
+    font-family: 'Poiret One';
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px;
+
+}
+.slider-half-item article {
+    margin: 2rem;
+}
+.slider-half-item article .button-section {
+    margin-top: 1rem;
+}
+.slider-half-item .button {
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    margin: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poiret One';
+}
+.order-button {
+    color:#8d9b6a;
+    border: #8d9b6a 2px solid;
+}
+.book-button {
+    color:#ffc107 ;
+    border: #ffc107 2px solid;
+}
+.book-button:hover {
+    background-color: rgb(243, 243, 243);
+    transition: 0.8s;
+}
+.order-button:hover {
+    background-color: rgb(243, 243, 243);
+    transition: 0.8s;
+}
+.pizza-img {
+    
+    background-image: url("2image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+.advantages-box {
+    background-color: transparent;
+}
+.advantages-one-third {
+    width: 33.3%;
+    float: left;
+    padding: 20px;
+    margin: 30px 0px 30px;
+}
+.column-advantage {
+    height: 250px;
+    border: solid 3px white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Poiret One';
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: end;
+}
+.bestindigrients {
+    background-image: url("https://images.unsplash.com/photo-1636210589497-2bd33f3821df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTZ8fGluZ3JlZGllbnRzJTIwd2hpdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+}
+.originalrecipe {
+    background-image: url("https://images.unsplash.com/photo-1581873372796-635b67ca2008?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE2fHxkZWxpY2F0ZSUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");  
+}
+.fastdelivery {
+    background-image: url("https://images.unsplash.com/photo-1576071944939-130083371a13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmlrZSUyMHdoaXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+}
+.kitchen-menu {
+    background-color: rgb(243, 243, 243);
+}
+.menu-one-forth {
+    width: 25%;
+    float: left;
+    font-family: 'Poiret One';
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.menu-one-forth img {
+    width: 100%;
+}
+
+.page-footer {
+    width: 100%;
+    font-family: 'Poiret One';
+    font-weight: 600;
+}

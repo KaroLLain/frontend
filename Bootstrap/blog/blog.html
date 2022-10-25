@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+
+        .carousel-item {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+
+        .ad1 {
+            background: url("https://images.unsplash.com/photo-1642285230644-d90210a4cb9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center;
+        }
+        .ad2 {
+            background: url("https://images.unsplash.com/photo-1642285230596-4eddc4bf6033?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center;
+        }
+        .ad3 {
+            background: url("https://images.unsplash.com/photo-1642285230633-cf8012546f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center;
+        }
+        @media (max-width: 576px) {
+            .carousel-item {
+            min-height: 28rem;
+            }
+        }  
+        @media (min-width: 576px) {
+            .carousel-item {
+            min-height: 50rem;
+            }
+        } 
+        #newsletter-box {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            background-image: url("https://images.unsplash.com/photo-1500491460312-c32fc2dbc751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        }
+        .form-box {
+            width: 20rem;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img width="auto" height="30" src="https://cdn.pixabay.com/photo/2016/02/19/15/34/orange-1210522__340.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="btn"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mr-auto mb-5 mb-md-0">
+                    <li class="nvav-item active">
+                        <a href="#" aria-current="page" class="nav-link">Home</a>
+                    </li>
+                    <li class="nvav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nvav-item">
+                        <a href="#" class="nav-link">Buy</a>
+                    </li>
+                    <li class="nvav-item">
+                        <a href="#" class="nav-link">Read</a>
+                    </li>
+                </ul>
+                <form action="" class="d-flex">
+                    <input type="search" placeholder="Search"
+                    aria-label="search" class="form-control mr-2">
+                    <button class="btn btn-outline-dark" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+            <div id="topCarousel" data-bs-ride="true" class="mt-4 mb-4 carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item rounded ad1 active">
+                        <div class="carousel-caption text-dark">
+                            <div class="display-3">Gdzie</div>
+                            <p>
+                                <p></p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded ad2">
+                        <div class="carousel-caption text-dark">
+                            <div class="display-3">chcesz</div>
+                            <p>miejsce, bilety, wydatki</p>
+                            <div class="data-caption">
+                                19 luty
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded ad3">
+                        <div class="carousel-caption text-light">
+                            <div class="display-3">być</div>
+                            <p>miejsce, bilety, wydatki</p>
+                            <div class="data-caption d-none d-sm-block">
+                                19 luty
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#topCarousel" type="button" data-bs-slide="prev" 
+                class="carousel-control-prev carousel-control-prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a href="#topCarousel" type="button" data-bs-slide="next" 
+                class="carousel-control-next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+    </div>
+
+    <main class="container">
+        <div class="row mt-4">
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="daisplay-5 card-title">Karta 1</div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consequatur!</p>
+                        <a href="#" class="btn btn-light">Read more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1596368257013-42f910ce12af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="daisplay-5 card-title">Karta 2</div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consequatur!</p>
+                        <a href="#" class="btn btn-light">Read more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-block col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1559537713-ad9a262e4241?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="daisplay-5 card-title">Karta 3</div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consequatur!</p>
+                        <a href="#" class="btn btn-light">Read more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mt-5 mb-5">
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1530733895788-f39cc96b6ae8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="" 
+                    class="rounded float-end w-50 ml-4 mb-4">
+                    <h2 class="blog-post-title">Przykładowy post</h2>
+                    <p class="blog-post-date">10 stycznia <a href="#">Adam</a></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sed. Sint <strong>libero mollitia nostrum</strong> saepe cum eius assumenda accusantium eos.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis iusto saepe voluptatibus quasi quis fuga rem dignissimos consectetur tempora laboriosam.</p>
+                    <h5>podtytuł</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, adipisci?</p>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet koloj dowoajcxa.</li>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam repellat molestiae, asperiores unde voluptate voluptates error perferendis nihil culpa et.</p>
+                    </ol>
+                </div>
+                <div class="blog-post mt-5">
+                    <img src="https://images.unsplash.com/photo-1531768758921-efe347c05370?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="" 
+                    class="rounded float-end w-50 ml-4 mb-4">
+                    <h2 class="blog-post-title">Przykładowy post</h2>
+                    <p class="blog-post-date">10 stycznia <a href="#">Adam</a></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sed. Sint <strong>libero mollitia nostrum</strong> saepe cum eius assumenda accusantium eos.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis iusto saepe voluptatibus quasi quis fuga rem dignissimos consectetur tempora laboriosam.</p>
+                    <h5>podtytuł</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, adipisci?</p>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet koloj dowoajcxa.</li>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam repellat molestiae, asperiores unde voluptate voluptates error perferendis nihil culpa et.</p>
+                    </ol>
+                </div>
+                <!--paginacja-->
+                <nav class="mt-5" aria-label="paginacja">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a href="#" tabindex="-1" aria-disabled="true" class="page-link">
+                                Preview
+                            </a>
+                        </li>
+                        <li class="page-item"><a href="#" class="page-link active">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">6</a></li>
+                        <li class="page-item"><a href="#" class="page-link">7</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <aside class="col-md-4 mt-5">
+                <!--sidebar-->
+                <div class="bg-light p-4 mb-3 rounded">
+                    <h4 class="font-italic">About</h4>
+                    <p>blog o Tobie</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic totam maiores rem fugiat vel cupiditate, obcaecati, praesentium debitis dolor illo pariatur accusantium consequuntur ullam earum, sint veritatis esse aliquam.</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-italic">Archiwum</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">Grudzień</a></li>
+                        <li><a href="#">Listopad</a></li>
+                        <li><a href="#">Wrzesień</a></li>
+                        <li><a href="#">Grudzień</a></li>
+                        <li><a href="#">Listopad</a></li>
+                        <li><a href="#">Wrzesień</a></li>
+                        <li><a href="#">Grudzień</a></li>
+                        <li><a href="#">Listopad</a></li>
+                        <li><a href="#">Wrzesień</a></li>
+                    </ol>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-italic"></h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">Podróże</a></li>
+                        <li><a href="#">Kulinaria</a></li>
+                        <li><a href="#">Hobby</a></li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
+
+        <div class="rounded p-4 mb-3 bg-light" id="newsletter-box">
+            <div class="d-flex justify-content-center align-content-center">
+                <div class="form-box">
+                    <form action="" novalidate class="row g-3 needs-validation">
+                        <div class="col-12">
+                           <!-- <label for="#emailInput" class="form-label"></label>-->
+                            <input type="text" placeholder="Text to me..." 
+                                required class="form-control" id="emailInput">
+                            <div class="valid-feedback">Thank you!</div>
+                            <div class="invalid-feedback">Please write your email adress.</div>
+                        </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="agreement" required>
+                            <label for="agreement" class="form-check-label">I Agree to Privacy Policy</label>
+                            <div class="invalid-feedback">Check and sign our Privacy Policy.</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-light btn-block" type="submit">
+                            Please hug me! I'm <strong>newsletter</strong>.
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-6">
+                <div class="border rounded row g-0 overflow-hidden shadow-sm position-relative">
+                    <div class="col p-4 d-flex flex-column">
+                        <strong class="mb-2 text-dark">Wyspy</strong>
+                        <div class="display-4">Wycieczka</div>
+                        <div class="mb-1 text-muted">Grudzień 1</div>
+                        <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptatum!</p>
+                        <a href="#" class="stretched-link">Read more...</a>
+                    </div>
+                    <div class="col-auto d-none d-md-block">
+                        <img src="https://images.unsplash.com/photo-1567201864585-6baec9110dac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width="200px" height="250px" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="border rounded row g-0 overflow-hidden shadow-sm position-relative">
+                    <div class="col p-4 d-flex flex-column">
+                        <strong class="mb-2 text-dark">Wyspy</strong>
+                        <div class="display-4">Wycieczka</div>
+                        <div class="mb-1 text-muted">Grudzień 1</div>
+                        <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptatum!</p>
+                        <a href="#" class="stretched-link">Read more...</a>
+                    </div>
+                    <div class="col-auto d-none d-md-block">
+                        <img src="https://images.unsplash.com/photo-1575330734740-21b22ac7bf5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width="200px" height="250px" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-dark bg-light mt-3">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <h5>Nazwa bloga</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, consequatur.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <h5>Links</h5>
+                    <ul><li><a href="#">About</a></li></ul>
+                    <ul><li><a href="#">Contact</a></li></ul>
+                    <ul><li><a href="#">Policy</a></li></ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <h5>Contact</h5>
+                    <p><a href="mailto:admin@example.com">admin@example.com</a></p>
+                    <p>ul. Ujazdowska 15</p>
+                    <p>51-899 Warszawa</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-12 text-center">Copyright by blog.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            let formElements = document.querySelectorAll(".needs-validation");
+            Array.prototype.slice.call(formElements).forEach(function(form){
+                form.addEventListener('submit', function(event){
+                    if(!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                });
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

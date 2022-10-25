@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+function Flyweight(brand, cpu, ram) {
+    this.brand = brand;
+    this.cpu = cpu;
+    this.ram = ram;
+}
+
+function Computer(brand, cpu, cpuSpeed, ram, modelId) {
+    this.flyweight = FlyweightFactory.get(brand, cpu, ram);
+    this.cpuSpeed = cpuSpeed;
+    this.modelId = modelId;
+}
+
+const FlyweightFactory = (function(){
+    let flyweights = {};
+
+    return {
+        get: function(brand, cpu, ram) {
+            let propName = `${brand}_${cpu}_${ram}`;
+            if(!flyweights[propName]) {
+                flyweights[propName] = new Flyweight(brand, cpu, ram);
+            }
+            return flyweights[propName];
+        },
+        count: function() {
+            let count = 0;
+            for(let el in flyweights) count++;
+            return count;
+        },
+        getFlyweights: function() {
+            return flyweights;
+        }
+    };
+})();
+
+let arr = [];
+arr.push(new Computer("Dell", "Intel", 4000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 3000, "16GB", "fsvdsbww"));
+arr.push(new Computer("Asus", "Intel", 3000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Amd", 4000, "32GB", "hiknlkij"));
+arr.push(new Computer("Asus", "Intel", 3000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 24000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 24000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 24000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 24000, "16GB", "hiknlkij"));
+arr.push(new Computer("Dell", "Intel", 3000, "16GB", "hiknlkij"));
+
+console.log("Ilość komp: " + arr.length);
+console.log("Ilość pyłków: " + FlyweightFactory.count());
+
+
+</script>
+<body>
+    
+</body>
+</html>

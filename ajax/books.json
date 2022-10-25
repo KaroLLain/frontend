@@ -1,0 +1,22 @@
+{
+    "books":
+ [
+    {
+        "title": "Książka1",
+        "year": 1987,
+        "first edition": true
+    },
+
+    {
+        "title": "Książka2",
+        "year": 2004,
+        "first edition": false
+    },
+
+    {
+        "title": "Książka3",
+        "year": 1958,
+        "first edition": true
+    }
+ ]
+}

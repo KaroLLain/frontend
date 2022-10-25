@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    function Task(name, description, isDone) {
+        this.name = name;
+        this.description = description;
+        this.isDone = isDone;
+    }
+
+    function TaskBuilder() {
+        let name, description, isDone;
+
+        return {
+            setName: function(newName){
+                name = newName;
+                return this;
+            },
+
+            setDescription: function(newDescription){
+                description = newDescription;
+                return this;
+            },
+        
+            setDoneFlag: function(doneFlag){
+                isDone = doneFlag;
+                return this;
+            },
+            build: function() {
+                return new Task(name, description, isDone);
+            }
+
+        }
+    }
+
+    const tb = TaskBuilder();
+    let bulider = tb.setName("zadarnie1");
+    tb.setDescription("opis");
+    tb.setDoneFlag(true);
+    let task = tb.build();
+    console.log(task);
+    
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+            let toastNodes = [].slice.call(document.querySelectorAll(".toast"));
+            let toastList = toastNodes.map(function(toast){
+                let t = new bootstrap.Toast(toast);
+                t.show();
+                return t;
+            })
+        }
+
+    </script>
+
+</head>
+<body>
+    
+<div style="position: relative; min-height:300px;">
+    <div style="position: absolute; right: 0; top: 0;">
+        <div class="toast" data-bs-delay="5000">
+            <div class="toast-header">
+                <strong class="mr-auto">Toast</strong>
+                <small>3 minutes ago</small>
+                <button data-bs-dismiss="toast"
+                class="ml-2 mb-1 close" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Notification 1
+            </div>
+        </div>
+        <div class="toast" data-bs-delay="3000">
+            <div class="toast-header">
+                <strong class="mr-auto">Toast</strong>
+                <small>3 minutes ago</small>
+                <button data-bs-dismiss="toast"
+                class="ml-2 mb-1 close" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Notification 2
+            </div>
+        </div>
+        <div class="toast" data-bs-autohide="false">
+            <div class="toast-header">
+                <strong class="mr-auto">Toast</strong>
+                <small>3 minutes ago</small>
+                <button data-bs-dismiss="toast"
+                class="ml-2 mb-1 close" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Notification 3
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

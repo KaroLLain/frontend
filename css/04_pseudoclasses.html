@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: teal;
+        }
+        a:visited{
+            color: palevioletred;
+        }
+        a:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        a:active {
+            color: red;
+        }
+        input[type="checkbox"]:checked + label {
+            font-weight: bold;
+            color: blueviolet;
+        }
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+        input[type="text"]:disabled{
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+        p:first-child{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: palevioletred;
+        }
+        p:last-child{
+            color: blueviolet;
+        }
+        p:nth-child(even){
+            font-weight: bold;
+        }
+        p:nth-child(odd){
+            font-style: italic ; 
+        }
+        p:nth-child(3){
+            background-color: aquamarine;
+        }
+        p:nth-child(2n){
+            border: 2px double teal;
+        }
+        input:focus{
+            background-color: lightpink;
+        }
+        p:not(.intro){
+            text-decoration: underline;
+        }
+        p.intro:not(.box){
+            background-color: lightblue;
+        }
+        p.intro:not(.box):not(.end){
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" name="system" id="android">
+        <label for="android">Android</label>
+        <input type="checkbox" name="system" id="ios">
+        <label for="ios">IOS</label>
+        <input type="checkbox" name="system" id="mac">
+        <label for="mac">MAC</label>
+        <input disabled type="text" value="text">
+        <input type="text" value="wpisz text">
+    </form>
+   <ul>
+       <li><a href="#">Blog</a></li>
+       <li><a href="#">Kontakt</a></li>
+       <li><a href="#">Współpraca</a></li>
+       <li><a href="https://mozilla.org">mozilla</a></li>
+   </ul>
+   <div>
+       <p>Lorem ipsum dolor sit amet.</p>
+       <p class="intro">Lorem ipsum dolor sit amet.</p>
+       <p class="intro box">Lorem ipsum dolor sit amet.</p>
+       <p class="content">Lorem ipsum dolor sit amet.</p>
+       <p class="end">Lorem ipsum dolor sit amet.</p>
+   </div>
+</body>
+</html>

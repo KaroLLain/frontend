@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [data-color]{
+            background-color: greenyellow;
+            border: 2px dotted green;
+        }
+        [data-color = "blue"]{
+            background-color: violet;
+            border: 2px dotted darkmagenta;
+        }
+        [data-green = "green"]{
+            background-color: gold;
+            border: 2px solid goldenrod;
+        }
+        [data-green = "dark"]{
+            background-color: brown;
+            border: 2px solid black;
+        }
+        [class *= "str"]{
+            background-color: mediumorchid;
+        }
+        [class $= "game"]{
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div data-color>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad veritatis asperiores doloremque odit natus ratione blanditiis quia architecto enim, aliquid iusto itaque. Assumenda placeat recusandae necessitatibus doloribus. Vero, odio odit!</div>
+    <div data-green = "dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad veritatis asperiores doloremque odit natus ratione blanditiis quia architecto enim, aliquid iusto itaque. Assumenda placeat recusandae necessitatibus doloribus. Vero, odio odit!</div>
+    <div class = "small - text str box game">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad veritatis asperiores doloremque odit natus ratione blanditiis quia architecto enim, aliquid iusto itaque. Assumenda placeat recusandae necessitatibus doloribus. Vero, odio odit!</div>
+    <div data-green>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad veritatis asperiores doloremque odit natus ratione blanditiis quia architecto enim, aliquid iusto itaque. Assumenda placeat recusandae necessitatibus doloribus. Vero, odio odit!</div>
+    <p data-color="blue">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

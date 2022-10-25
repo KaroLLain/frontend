@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Transport(credetials) {
+            this.credetials = credetials;
+            this.send = function(addr, weight) {
+                //logika
+                return 120;
+            }
+        }
+
+        let addr = {country: "uk"};
+        let credetials = {tokken: "user:12345"};
+        let oldTransport = new Transport(credetials);
+        let oldPrice = oldTransport.send(addr, 10);
+        console.log("stara cena: " + oldPrice);
+
+        function newTransport() {
+            return{
+                login: function(credetials) {},
+                setPriority: function(priority){},
+                setDestitnation: function(addr){},
+                getPrice: function(){
+                    return 120;
+                }
+            }
+        }
+
+        function TransportAdapter(credetials) {
+            let shipping = newTransport();
+            shipping.login(credetials);
+
+            return {
+                send: function(addr, weight) {
+                    shipping.setPriority("normal");
+                    shipping.setDestitnation(addr);
+                    return shipping.getPrice(weight);
+                }
+            }
+        }
+
+        let cheaperTransport = TransportAdapter(credetials);
+        let newPrice = cheaperTransport.send(addr, 10);
+        console.log("Nowa cena: " + newPrice);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

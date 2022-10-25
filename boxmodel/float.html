@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            border: 2px solid red;
+        }
+        .left{
+            float: left; margin: 5px;
+        }
+        .right {float: left; margin: 5px;}
+        span{float: left; background-color: aqua; padding: 5px; margin: 5px;}
+        .clearfix::after {
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        article, aside {
+            box-sizing: border-box;
+            padding: 10PX;
+        }
+        .left-column {
+            width: 75%;
+            height: 300px;
+            float: left;
+            background-color: aquamarine;
+        }
+        .sidebar {
+            width: 25%;
+            height: 300px;
+            float: left;
+            background-color: lightcoral;
+        }
+        .page {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header clearfix">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolor cum? 
+            <img class="right" height="200px" src="https://cdn.pixabay.com/photo/2022/05/25/03/34/sea-view-7219685_960_720.jpg" alt=""> Tempora ipsa ipsum excepturi veniam commodi optio delectus dicta libero quas non officia, mollitia, fugiat maiores atque et, odio minus? Nemo enim porro, repellendus aliquid distinctio pariatur deserunt asperiores eligendi consequuntur odit architecto numquam ipsum? Laboriosam molestias ullam voluptatibus.
+            <span>Lorem ipsum dolor sit amet1.</span>
+            <span>Lorem ipsum dolor sit amet2.</span>
+            <span>Lorem ipsum dolor sit amet3.</span>
+            <span>Lorem ipsum dolor sit amet4.</span>
+        </header>
+        <article class="left-column">
+            article
+        </article>
+        <aside class="sidebar"> 
+            aside
+        </aside>
+    </div>
+</body>
+</html>

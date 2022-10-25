@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        let source = {
+            num: 10, 
+            str: "text", 
+            flag: true, 
+            arr: [10, 2, 15], 
+            date: new Date(2030, 10, 20),
+            obj: {a: 9, b: "text"}
+        };
+
+        var result = deepClone(source);
+
+        function deepClone(obj) {
+            var copy; 
+
+            if(obj === null || typeof obj !== "object")
+                return obj;
+
+            if(obj instanceof Date) {
+                copy = new Date ();
+                obj.setTime(obj.getTime());
+                return copy;
+            }
+
+            if(obj instanceof Array) {
+                copy = [];
+                for(let i = 0; i < obj.length; i++) {
+                    copy[i] = deepClone ( obj[i] );
+                }
+                return copy;
+            }
+
+            if(obj instanceof Object) {
+                copy = {};
+                for(key in obj) {
+                    console.log(key + " " + obj[key]);
+                    copy[key] = deepClone( obj[key] );
+                }
+
+                return copy;
+            }
+        }
+
+        console.log(result);
+
+        let source2 = {
+            num: 10, 
+            str: "text", 
+            flag: true, 
+            arr: [10, {data: 99}, 15], 
+            date: new Date(2030, 10, 20),
+            obj: {a: 9, b: "text"}
+        };
+
+        let result2 = deepClone(source2);
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
+

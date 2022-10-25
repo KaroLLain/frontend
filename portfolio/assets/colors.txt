@@ -1,0 +1,13 @@
+Violet - #cc41ff RGB 204, 65, 255
+light violet - #8e4888 142, 72, 136
+yellow - #ffb10a RGB 255, 177, 10
+light yellow - #c18608 RGB 193, 134, 8
+dark violet grey - #211f20 RGB 33, 31, 32
+grey - #d3d3d5 RGB 211, 211, 213
+blue - #0024ee 0, 36, 238
+
+
+Fonts:
+
+Century Ghotic Regular 
+Fingerpop

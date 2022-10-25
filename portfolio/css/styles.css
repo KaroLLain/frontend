@@ -1,0 +1,138 @@
+
+/*
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #cc41ff;
+    height: 100vh;
+}
+
+#navbar {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+//menu button
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.hamburger {
+    width: 80px;
+    height: 7px;
+    background: #ffb10a;
+    transition: 0.25s;
+    border-radius: 10px;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 7px;
+    background: #ffb10a;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+.hamburger::before {
+    transform: translateY(-20px);
+}
+.hamburger::after {
+    transform: translateY(20px);
+}
+
+//button animation
+
+.open .hamburger {
+    background-color: transparent;
+}
+
+.open .hamburger::before {
+    transform: rotate(-225deg);
+}
+
+.open .hamburger::after {
+    transform: rotate(225deg);
+}
+
+//menu animation
+
+.menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    background-color: transparent;
+    padding-top: 120px;
+    color: #ffb10a;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateZ(-100px);
+    pointer-events: none;
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: transparent;
+
+    color: #ffb10a;
+    text-decoration: none;
+    font-family: "Comfortaa", serif;
+    font-weight: bolder;
+}
+
+.menu-open {
+    opacity: 1;
+    transition: 0.3s;
+    transform: translateZ(0px);
+    pointer-events: all;
+    position: absolute;
+}
+
+.menu a:hover {
+    font-size: 1.1rem;
+    color: #211f20;
+    transition: 0.3s;
+}
+
+
+
+
+:root {
+
+    --violet: #cc41ff;
+    --light-violet: #8e4888;
+    --yellow:#ffb10a;
+    --light-yellow:#c18608;
+    --dark-violet-grey: #211f20;
+    --grey: #d3d3d5;
+    --blue: #0024ee;
+}  
+
+
+
+*/
+

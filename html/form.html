@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Forms:</h4>
+
+    <form action="login.php" method="POST">
+        <fieldset>
+            <legend>Logowanie</legend>
+            <p>
+                <label> Wpisz użytkownika:
+                    <input type="text" name="user_name" id="username"
+                placeholder="Wpisz nazwę" required>
+            </p>
+            </label>
+            <p>
+                <label for="password"> Wpisz hasło: </label>
+                <input type="password" name="password" id="password" required>
+            </p>
+            <p>
+                <button type="submit">Zaloguj</button>
+                <button type="reset">Resetuj</button>
+            </p>
+    </fieldset>
+    </form>
+
+    <form action="register.asp" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Rejestracja</legend>
+            <input type="hidden" value="csacsa" name="hidden_input">
+            <p>
+                <label> Wpisz użytkownika:
+                    <input type="text" name="user_name" id="username"
+                placeholder="Wpisz nazwę" required>
+            </p>
+            <p>
+                <label> Email:
+                    <input type="email" name="email" id="email"
+                placeholder="email" required>
+            </p>
+            </label>
+            <p>
+                <label for="password"> Wpisz hasło: </label>
+                <input type="password" name="password" id="password" required>
+            </p>
+            <p>
+                <label for="age"> Wiek: </label>
+                <input type="number" name="age" id="age" min="18" max="100" required>
+            </p>
+            <p>
+                <label for="password2"> Wpisz hasło ponownie: </label>
+                <input type="password2" name="password2" id="password2" required>
+               <p><label for="description">Opis użytkownika:</label><br>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea></p>
+            </p>
+            <p>
+
+            </p>
+            <label for="avatarimg">Wybierz avatar:</label>
+            <input type="file" name="avatar" id="avatarimg" accept="image/png img/jpg">
+            <p>
+            <p>
+                Fav color:
+                <input type="radio" name="color" id="red">
+                <label for="red">Red</label>
+                <input type="radio" name="color" id="blue">
+                <label for="blue">Blue</label>
+                <input type="radio" name="color" id="green">
+                <label for="green">Green</label>
+                <input type="radio" name="color" id="grey">
+                <label for="grey">Grey</label>
+            </p>      
+            <p>
+                Fav mark:
+                <input type="checkbox" name="brand" id="dodge">
+                <label for="dodge">dodge</label>
+                <input type="checkbox" name="brand" id="VW">
+                <label for="VW">VW</label>
+                <input type="checkbox" name="brand" id="green">
+                <label for="green">Green</label>
+                <input type="checkbox" name="brand" id="grey">
+                <label for="grey">Grey</label>
+            </p>    
+            
+            <p>
+                <label for="datetime">Data zakupu</label>
+                <input id="datetime" name="datetime" type="datetime-local">
+            </p>
+
+            <p>
+                <label for="carcolor">Car color:</label>
+                <input type="color" name="carcolor" id="carcolor">
+            </p>
+
+            <p>
+                <label for="telephone">Phone:</label>
+                <input type="tel" name="telephone" id="telephone">
+            </p>
+            <p>
+                <label for="distance">Przebieg:</label>
+                <input type="range" name="distance" id="distance" min="1" max="10000" step="10">
+            </p>
+            <p>
+                <label for="url">Strona aukcji:</label>
+                <input type="url" name="urladress" id="url">
+            </p>
+            <p>
+                <label for="theme">Template:</label>
+                <select name="theme" id="theme">
+                    <option value="white">biały</option>
+                    <option value="dark">ciemny</option>
+                    <option value="grey">szary</option>
+                </select>
+            </p>
+
+                <button type="submit">Zaloguj</button>
+                <button type="reset">Resetuj</button>
+            </p>
+    </fieldset>
+    </form>
+
+</body>
+</html>

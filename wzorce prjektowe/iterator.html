@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+const arr = ["one", "two", "three", 23];
+
+function iterate(arr, callback, scope) {
+    scope = scope||arr;
+    for(let i = 0; i < arr.lenght; i++){
+        callback.call(scope, i, arr[i]);
+    }
+} 
+
+iterate(arr, function(index, element){
+    console.log("index " + index, element);
+});
+
+let Iterator = function(items) {
+    this.index = 0;
+    this.items = items;
+}
+
+Iterator.prototype = {
+    first: function(){
+        this.reset;
+        return this.next();
+    },
+    next: function() {
+        return this.items[this.index++];
+    },
+    hasNext: function() {
+        return this.index <= this.items.lenght;
+    },
+    reset: function() {
+        this.index = 0;
+    },
+    each: function(callback) {
+        for(let item = this.first(); this.hasNext(); item = this.next()) {
+            callback(item);
+        }
+    }
+};
+
+let arr2 = ["23", "25", "28", "159"];
+let iterator = new Iterator(arr2);
+iterator.each(function(item){
+    console.log(item);
+});
+    
+
+</script>
+
+<body>
+    
+</body>
+</html>

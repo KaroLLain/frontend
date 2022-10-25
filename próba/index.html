@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../próba/assets/scss/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,200&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="page" class>
+        <div id="Background">
+            <canvas data-engine="" width="323" height="897" style="width: 323px; height:897px">
+        </div>
+        <div class="mask" id="Mask">
+            <div class="mask_top"></div>
+            <div class="mask_bottom"></div>
+        </div>
+        <div class="frame" id="Frame">
+            <div class="frame_line frame_line-left"></div>
+            <div class="frame_line frame_line-right"></div>
+            <div class="frame_line frame_line-top"></div>
+            <div class="frame_line frame_line-bottom"></div>
+        </div>
+        <div class="theme" id="Theme" x-data @click="$store.ui.toggleTheme()">
+            <div class="theme_color is-selected" :class="{'is-selected': $store.ui.theme === 'light' }" >
+                <div class="_box">
+                    ::before
+                </div>
+                <div class="_text">Light</div>
+            </div>
+            <div class="theme_color"  :class="{'is-selected': $store.ui.theme === 'dark'}">
+                <div class="_box">
+                    ::before
+                </div>
+                <div class="_text">Dark</div>
+            </div>
+        </div>
+        <header class="siteHeader" id="SiteHeader">
+            <h1 class="siteHeader_title">Karolina Knap</h1>
+            <p class="siteHeader_label">Creator & Developer</p>
+            <nav class="siteHeader_nav" x-data>
+                <ol>
+                    <li :class="{ 'is-selected' : $store.ui.currentPath === '/'}">...</li>
+                    <li :class="{ 'is-selected' : $store.ui.currentPath === 'tools'}" class>...</li>
+                    <li :class="{ 'is-selected' : $store.ui.currentPath === 'projects'}" class>...</li>
+                    <li :class="{ 'is-selected' : $store.ui.currentPath === 'contact'}">...</li>
+                </ol>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
